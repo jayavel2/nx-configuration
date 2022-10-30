@@ -7,7 +7,9 @@
     "postinstall": "node ./decorate-angular-cli.js",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "start:redux": "npx nx run app-redux-demo:serve --proxy-config proxy.config.js",
+    "mock": "node apps/mock/app"
   },
   "private": true,
   "dependencies": {
@@ -19,7 +21,13 @@
     "@angular/platform-browser": "~14.2.0",
     "@angular/platform-browser-dynamic": "~14.2.0",
     "@angular/router": "~14.2.0",
+    "@ngrx/effects": "^14.3.2",
+    "@ngrx/entity": "^14.3.2",
+    "@ngrx/store": "^14.3.2",
+    "@ngrx/store-devtools": "^14.3.2",
     "@nrwl/angular": "15.0.4",
+    "bootstrap": "^5.2.2",
+    "express": "^4.18.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
